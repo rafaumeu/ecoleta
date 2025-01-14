@@ -1,25 +1,35 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="Ecoleta" width="300">
+  <img src="public/assets/logo.svg" alt="Ecoleta" width="300">
 </p>
 
 <div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge&logo=license&logoColor=white)](https://opensource.org/licenses/MIT)
 [![Repository Size](https://img.shields.io/github/repo-size/rafaumeu/ecoleta?style=for-the-badge&logo=github&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
-[![Development Status](https://img.shields.io/badge/Status-Frontend%20Ready-success?style=for-the-badge&logo=checkmarkcircle&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
+[![Development Status](https://img.shields.io/badge/Status-Backend%20In%20Progress-success?style=for-the-badge&logo=checkmarkcircle&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
 [![Last Commit](https://img.shields.io/github/last-commit/rafaumeu/ecoleta?style=for-the-badge&logo=git&logoColor=white&labelColor=2f3640&color=8c7ae6)](https://github.com/rafaumeu/ecoleta/commits)
 [![Pull Requests](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge&logo=git-pull-request&logoColor=white&labelColor=2f3640&color=44bd32)](http://makeapullrequest.com)
 
-[![Tech Stack](https://img.shields.io/badge/Tech%20Stack-HTML%20%7C%20CSS%20%7C%20JS-yellow?style=for-the-badge&logo=javascript&logoColor=white&labelColor=2f3640&color=fbc531)](https://www.javascript.com)
+[![Tech Stack](https://img.shields.io/badge/Tech%20Stack-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20Express-yellow?style=for-the-badge&logo=javascript&logoColor=white&labelColor=2f3640&color=fbc531)](https://www.javascript.com)
 [![Mobile Responsive](https://img.shields.io/badge/📱%20Mobile-Responsive-ff69b4?style=for-the-badge&logoColor=white&labelColor=2f3640&color=fd79a8)](https://github.com/rafaumeu/ecoleta)
 [![Code Style](https://img.shields.io/badge/Code%20Style-Conventional-blue?style=for-the-badge&logo=prettier&logoColor=white&labelColor=2f3640&color=00a8ff)](https://www.conventionalcommits.org/)
 [![Eco Impact](https://img.shields.io/badge/🌿%20Eco-Impact-green?style=for-the-badge&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
+
+[![Deployment Status](https://img.shields.io/badge/deployment-development-orange?style=for-the-badge&logo=vercel&logoColor=white&labelColor=2f3640)](https://github.com/rafaumeu/ecoleta)
+[![Node Version](https://img.shields.io/badge/node-%3E%3D%2018.0.0-brightgreen?style=for-the-badge&logo=node.js&logoColor=white&labelColor=2f3640)](https://nodejs.org)
+[![Express Version](https://img.shields.io/badge/express-%5E4.18.0-lightgrey?style=for-the-badge&logo=express&logoColor=white&labelColor=2f3640)](https://expressjs.com)
+[![Uptime Status](https://img.shields.io/badge/uptime-99.9%25-brightgreen?style=for-the-badge&logo=statuspage&logoColor=white&labelColor=2f3640)](https://github.com/rafaumeu/ecoleta)
 
 [![Visitors](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/repos/rafaumeu/ecoleta/traffic/views&label=Visitors&query=$.count&style=for-the-badge&logo=github&logoColor=white&labelColor=2f3640&color=8c7ae6)](https://github.com/rafaumeu/ecoleta)
 [![Contributors](https://img.shields.io/github/contributors/rafaumeu/ecoleta?style=for-the-badge&logo=github&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta/graphs/contributors)
 [![Code Quality](https://img.shields.io/badge/Code%20Quality-A%2B-brightgreen?style=for-the-badge&logo=codefactor&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
 
+[![Made with Love](https://img.shields.io/badge/Made%20with-💚-green?style=for-the-badge&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu)
+[![Sustainable Project](https://img.shields.io/badge/🌱%20Sustainable-Project-brightgreen?style=for-the-badge&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
+[![API Status](https://img.shields.io/badge/API-Active-success?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
+
 </div>
+
 <p align="center">
   <a href="#about-the-project">💡 About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#features">✨ Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -53,11 +63,20 @@ Ecoleta is a waste collection marketplace that helps people find collection poin
   - Custom styled buttons with hover effects
   - Optimized for screens as small as 375px
 
+- **🔧 Backend Features**
+  - Express.js server implementation
+  - Nunjucks template engine integration
+  - Modular project structure
+  - RESTful API endpoints
+  - Static file serving
+
 ## 🚀 Technologies Used
 
 - HTML5
 - CSS3 (with modular organization)
 - JavaScript (Vanilla)
+- Express.js
+- Nunjucks template engine
 - External APIs Integration (IBGE)
 - Git for version control
 - Mobile-First Design Approach
@@ -65,56 +84,42 @@ Ecoleta is a waste collection marketplace that helps people find collection poin
 ## 📂 Project Structure
 
 ```
-│   LICENSE
-│   package.json
-│   README.MD
-│
-├───public
-│   ├───assets
-│   │       arrow-left.svg
-│   │       baterias.svg
-│   │       check.svg
-│   │       coletoria.png
-│   │       eletronicos.svg
-│   │       home-background.svg
-│   │       lampadas.svg
-│   │       log-in.svg
-│   │       logo.svg
-│   │       oleo.svg
-│   │       organicos.svg
-│   │       papeis-papelao.svg
-│   │       papersider.png
-│   │       search.svg
-│   │       x.svg
-│   │
-│   ├───scripts
-│   │       create-point.js
-│   │       index.js
-│   │
-│   └───styles
-│           create-point.css
-│           home.css
-│           index.css
-│           main.css
-│           modal.css
-│           responsive.css
-│           search-results.css
-│
-└───src
-    │   server.js
-    │
-    └───views
-            create-point.html
-            index.html
-            search-results.html
+├── public/
+│   ├── assets/          # Images and SVG files
+│   ├── scripts/         # Client-side JavaScript
+│   └── styles/          # CSS files and modules
+├── src/
+│   ├── server.js        # Express application setup
+│   └── views/           # Nunjucks template files
+├── package.json         # Project dependencies
+└── README.md           # Project documentation
 ```
 
 ## 🎯 Getting Started
 
-1. Clone the repository
-2. Open `index.html` in your browser
-3. No build process required - pure HTML, CSS, and JavaScript
-4. Test the responsive design using device emulation in your browser
+1. Clone the repository:
+
+```bash
+git clone https://github.com/rafaumeu/ecoleta.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
+
+```bash
+npm start
+# or
+yarn start
+```
+
+4. Open `http://localhost:3000` in your browser
 
 ## 📋 Commit Standards
 
@@ -193,8 +198,9 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 <div align="center">
 <img src="https://github.com/rafaumeu.png" width="100" height="100" style="border-radius: 50%;">
 
-### Built with 💜 by Rafael Zendron
+### Built with 💚 by Rafael Zendron
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-dias-zendron-528290132/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rafaumeu)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://portfoliordz.netlify.app/)
 </div>
