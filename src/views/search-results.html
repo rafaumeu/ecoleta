@@ -1,55 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@400;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles/index.css">
-
-  <title>Criar um ponto de coleta</title>
-</head>
-
-<body>
-  <div id="page-search-results">
-
-    <header>
-      <img src="./assets/logo.svg" alt="logo">
-      <a href="/">
-        <span></span>
-        Voltar para home</a>
-    </header>
-    <main>
-      <h3><strong>2 pontos</strong> encontrados</h3>
-      <div class="cards">
-        <div class="card">
-          <img src="./assets/coletoria.png" alt="Coletoria">
-          <h1>Coletoria</h1>
-          <h3>Resíduos Eletrônicos, Lâmpadas</h3>
-          <p>Rio do Sul, Santa Catarina <br>
-            Guilherme Gemballa, Jardim América <br>
-            Nº 260</p>
-        </div>
-        <div class="card">
-          <img src="./assets/papersider.png" alt="">
-          <h1>Papersider</h1>
-          <h3>Papéis e Papelão</h3>
-          <p>
-            Rio do Sul, Santa Catarina <br>
-            Guilherme Gemballa, Jardim América <br>
-            Nº 260
-          </p>
-        </div>
+{% extends "layout.html" %}
+{% set bodyID = "page-search-results" %}
+{% block title %}
+  <title>🔍  Resultados da pesquisa</title>
+{% endblock title %}
+{% block content %}
+  {% include 'partials/page-header.html' %}
+  <main>
+    <h3>
+      <strong>2 pontos</strong>
+      encontrados</h3>
+    <div class="cards">
+      <div class="card">
+        <img src="./assets/coletoria.png" alt="Coletoria">
+        <h1>Coletoria</h1>
+        <h3>Resíduos Eletrônicos, Lâmpadas</h3>
+        <p>Rio do Sul, Santa Catarina <br> Guilherme Gemballa, Jardim América <br> Nº 260</p>
       </div>
-    </main>
-
-  </div>
-</body>
-
-
-</html>
+      <div class="card">
+        <img src="./assets/papersider.png" alt="">
+        <h1>Papersider</h1>
+        <h3>Papéis e Papelão</h3>
+        <p>
+          Rio do Sul, Santa Catarina <br> Guilherme Gemballa, Jardim América <br> Nº 260
+        </p>
+      </div>
+    </div>
+  </main>
+{% endblock content %}

@@ -9,14 +9,17 @@ nunjucks.configure('src/views', {
 server.use(express.static('public'))
 
 server.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html')
+  res.render('index.html')
 })
 server.get('/create-point', (req, res) => {
-  res.sendFile(__dirname + '/views/create-point.html')
+  res.render('create-point.html')
 })
-server.get('/search-results', (req, res) => {
-  res.sendFile(__dirname + '/views/search-results.html')
+server.get('/search', (req, res) => {
+  res.render('search-results.html')
 })
 server.listen(3000, () => {
-  console.log('Servidor executando na porta 3000')
+  console.log(`
+    Servidor executando na porta 3000
+    acesse http://localhost:3000
+    `)
 })

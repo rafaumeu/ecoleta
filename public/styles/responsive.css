@@ -21,7 +21,7 @@
   #page-search-results .cards img {
     height: 200px;
   }
-  /* Adicione essas linhas para melhorar a responsividade do formulário */
+  /* Melhorias no formulário */
   #page-create-point form {
     width: 100%;
     padding: 20px;
@@ -30,8 +30,13 @@
   #page-create-point form .field-group {
     flex-direction: column;
   }
-  #page-create-point form .field {
-    margin-bottom: 20px;
+  #page-create-point form .field-group .field + .field {
+    margin-left: 0; /* Remove o espaçamento entre os campos */
+    margin-top: 16px; /* Adiciona espaçamento vertical entre os campos */
+  }
+
+  #page-create-point form .field-group .field {
+    width: 100%; /* Faz cada campo ocupar 100% da largura */
   }
   #page-create-point form .field input {
     width: 100%;
@@ -39,20 +44,46 @@
   #page-create-point form button {
     width: 100%;
   }
-  /* Adicione essas linhas para melhorar a responsividade dos itens de coleta */
+  /* Melhorias no legend do formulário */
+  #page-create-point form legend {
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: flex-start; /* Alinha os elementos à esquerda */
+    gap: 8px; /* Adiciona espaçamento entre os elementos */
+  }
+  #page-create-point form legend h2 {
+    margin-bottom: 8px; /* Espaço abaixo do título */
+  }
+  #page-create-point form legend span {
+    font-size: 14px; /* Tamanho da fonte ajustado para telas menores */
+  }
+  /* Melhorias nos itens de coleta */
   .items-grid {
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 12px; /* Adicionado espaçamento entre os itens */
   }
   .items-grid li {
     margin-bottom: 20px;
+    padding: 16px; /* Adicionado padding interno */
+    width: 100%; /* Ocupa 100% da largura */
+    text-align: center;
+    background-color: #f0f0f5;
+    border: 2px solid #f0f0f5;
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: all 0.3s ease; /* Transição suave */
   }
   .items-grid li img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    max-width: 80px; /* Limita o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+    margin-bottom: 8px; /* Espaço entre a imagem e o texto */
   }
-  /* Adicione essas linhas para melhorar a responsividade do header */
+  .items-grid li span {
+    font-size: 14px; /* Tamanho da fonte ajustado */
+    color: var(--title-color);
+    word-wrap: break-word; /* Evita overflow de texto */
+  }
+  /* Melhorias no header */
   #page-create-point header,
   #page-search-results header {
     flex-direction: column;
@@ -64,11 +95,12 @@
   }
 }
 
-@media (min-width 1780px) {
+@media (min-width: 1780px) {
   #page-home {
     background-position-x: 40vw;
   }
 }
+
 @media (max-width: 375px) {
   #page-home header a {
     position: absolute;
@@ -76,7 +108,18 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  /* Ajustes adicionais para telas muito pequenas */
+  .items-grid li {
+    padding: 12px; /* Padding menor para telas pequenas */
+  }
+  .items-grid li img {
+    max-width: 60px; /* Imagem menor para telas pequenas */
+  }
+  .items-grid li span {
+    font-size: 12px; /* Fonte menor para telas pequenas */
+  }
 }
+
 @media (max-height: 760px) {
   #page-home {
     background-position-y: 200px;

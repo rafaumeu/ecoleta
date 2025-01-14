@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
+    <link rel="shortcut icon" href="/assets/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"/>
+    <link rel="manifest" href="/assets/site.webmanifest"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/index.css"/>
+    {% block title %}
+      <title>♻️ Ecoleta</title>
+    {% endblock title %}
+  </head>
+  <body>
+    <div id="{{ bodyID }}"> {% block content %}{% endblock content %}
+      </div>
+      {% block modal %}{% endblock modal %}
+      {% block scripts %}{% endblock
+    scripts %}
+    </body>
+  </html>
