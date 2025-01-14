@@ -5,7 +5,7 @@ const db = require('./database/db')
 
 nunjucks.configure('src/views', {
   express: server,
-  noCache: true
+  noCache: true,
 })
 server.use(express.static('public'))
 
@@ -16,7 +16,11 @@ server.get('/create-point', (req, res) => {
   res.render('create-point.html')
 })
 server.get('/search', (req, res) => {
-  res.render('search-results.html')
+  db.all(`SELECT * FROM places`, function (err, rows) {
+    if (err) return console.log(err)
+    const total = rows.length
+    res.render('search-results.html', {places: rows, total})
+  })
 })
 server.listen(3000, () => {
   console.log(`
