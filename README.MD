@@ -65,37 +65,48 @@ Ecoleta is a waste collection marketplace that helps people find collection poin
 ## 📂 Project Structure
 
 ```
-C:.
-│   create-point.html
-│   index.html
-│   search-results.html
+│   LICENSE
+│   package.json
+│   README.MD
 │
-├───assets
-│       arrow-left.svg
-│       baterias.svg
-│       check.svg
-│       eletronicos.svg
-│       home-background.svg
-│       lampadas.svg
-│       log-in.svg
-│       logo.svg
-│       oleo.svg
-│       organicos.svg
-│       papeis-papelao.svg
-│       search.svg
-│       x.svg
+├───public
+│   ├───assets
+│   │       arrow-left.svg
+│   │       baterias.svg
+│   │       check.svg
+│   │       coletoria.png
+│   │       eletronicos.svg
+│   │       home-background.svg
+│   │       lampadas.svg
+│   │       log-in.svg
+│   │       logo.svg
+│   │       oleo.svg
+│   │       organicos.svg
+│   │       papeis-papelao.svg
+│   │       papersider.png
+│   │       search.svg
+│   │       x.svg
+│   │
+│   ├───scripts
+│   │       create-point.js
+│   │       index.js
+│   │
+│   └───styles
+│           create-point.css
+│           home.css
+│           index.css
+│           main.css
+│           modal.css
+│           responsive.css
+│           search-results.css
 │
-├───scripts
-│       create-point.js
-│       index.js
-│
-└───styles
-        create-point.css
-        home.css
-        index.css
-        modal.css
-        responsive.css
-        search-results.css
+└───src
+    │   server.js
+    │
+    └───views
+            create-point.html
+            index.html
+            search-results.html
 ```
 
 ## 🎯 Getting Started
