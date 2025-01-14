@@ -3,7 +3,7 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 const server = express()
 const db = require('./database/db')
-
+const port = process.env.port || 3000
 nunjucks.configure('src/views', {
   express: server,
   noCache: true,
