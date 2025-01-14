@@ -1,6 +1,11 @@
 const express = require('express')
+const nunjucks = require('nunjucks')
 const server = express()
 
+nunjucks.configure('src/views', {
+  express: server,
+  noCache: true
+})
 server.use(express.static('public'))
 
 server.get('/', (req, res) => {
