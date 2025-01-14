@@ -1,3 +1,4 @@
+require('dotenv').config(); // Adicionar esta linha no início do arquivo
 const express = require('express')
 const nunjucks = require('nunjucks')
 const server = express()

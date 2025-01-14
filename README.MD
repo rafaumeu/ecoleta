@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/assets/logo.svg" alt="Ecoleta" width="300">
+  <img src="assets/logo.svg" alt="Ecoleta" width="300">
 </p>
 
 <div align="center">
@@ -18,7 +18,12 @@
 [![Deployment Status](https://img.shields.io/badge/deployment-development-orange?style=for-the-badge&logo=vercel&logoColor=white&labelColor=2f3640)](https://github.com/rafaumeu/ecoleta)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D%2018.0.0-brightgreen?style=for-the-badge&logo=node.js&logoColor=white&labelColor=2f3640)](https://nodejs.org)
 [![Express Version](https://img.shields.io/badge/express-%5E4.18.0-lightgrey?style=for-the-badge&logo=express&logoColor=white&labelColor=2f3640)](https://expressjs.com)
-[![Uptime Status](https://img.shields.io/badge/uptime-99.9%25-brightgreen?style=for-the-badge&logo=statuspage&logoColor=white&labelColor=2f3640)](https://github.com/rafaumeu/ecoleta)
+[![Database](https://img.shields.io/badge/SQLite-3-blue?style=for-the-badge&logo=sqlite&logoColor=white&labelColor=2f3640)](https://www.sqlite.org)
+
+[![Error Handling](https://img.shields.io/badge/Error%20Handling-Robust-success?style=for-the-badge&logo=shield&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
+[![Database Status](https://img.shields.io/badge/Database-Active-success?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
+[![Search Feature](https://img.shields.io/badge/Search-Dynamic-orange?style=for-the-badge&logo=algolia&logoColor=white&labelColor=2f3640&color=ff9f43)](https://github.com/rafaumeu/ecoleta)
+[![API Integration](https://img.shields.io/badge/API-IBGE%20Integration-blue?style=for-the-badge&logo=api&logoColor=white&labelColor=2f3640&color=00a8ff)](https://github.com/rafaumeu/ecoleta)
 
 [![Visitors](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/repos/rafaumeu/ecoleta/traffic/views&label=Visitors&query=$.count&style=for-the-badge&logo=github&logoColor=white&labelColor=2f3640&color=8c7ae6)](https://github.com/rafaumeu/ecoleta)
 [![Contributors](https://img.shields.io/github/contributors/rafaumeu/ecoleta?style=for-the-badge&logo=github&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta/graphs/contributors)
@@ -26,7 +31,7 @@
 
 [![Made with Love](https://img.shields.io/badge/Made%20with-💚-green?style=for-the-badge&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu)
 [![Sustainable Project](https://img.shields.io/badge/🌱%20Sustainable-Project-brightgreen?style=for-the-badge&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
-[![API Status](https://img.shields.io/badge/API-Active-success?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=2f3640&color=44bd32)](https://github.com/rafaumeu/ecoleta)
+[![Template Engine](https://img.shields.io/badge/Template%20Engine-Nunjucks-red?style=for-the-badge&logo=ninja&logoColor=white&labelColor=2f3640&color=e84118)](https://github.com/rafaumeu/ecoleta)
 
 </div>
 
@@ -41,13 +46,15 @@
 
 ## 💡 About the Project
 
-Ecoleta is a waste collection marketplace that helps people find collection points efficiently. The project features a responsive web interface with search functionality and dynamic point registration, optimized for all screen sizes.
+Ecoleta is a waste collection marketplace that helps people find collection points efficiently. The project features a responsive web interface with search functionality and dynamic point registration, optimized for all screen sizes. With SQLite integration and robust error handling, it provides a reliable platform for connecting waste collectors with those seeking proper disposal methods.
 
 ## ✨ Features
 
 - **🔍 Search for Collection Points**
   - Modal-based search interface
   - City and state filtering
+  - Dynamic search with database integration
+  - Real-time results display
   - Intuitive search experience
 
 - **📝 Collection Point Registration**
@@ -55,6 +62,7 @@ Ecoleta is a waste collection marketplace that helps people find collection poin
   - Dynamic UF and City selection using IBGE API
   - Interactive items grid with visual feedback
   - Responsive form layout with styled field groups
+  - Success and error feedback modals
 
 - **🎨 Interface Components**
   - Responsive header with dynamic navigation
@@ -70,6 +78,13 @@ Ecoleta is a waste collection marketplace that helps people find collection poin
   - RESTful API endpoints
   - Static file serving
 
+- **📊 Database & Error Handling**
+  - SQLite3 integration for data persistence
+  - Dynamic search functionality with database queries
+  - Robust error handling for form submissions
+  - Success and error feedback modals
+  - Data validation and sanitization
+
 ## 🚀 Technologies Used
 
 - HTML5
@@ -77,6 +92,7 @@ Ecoleta is a waste collection marketplace that helps people find collection poin
 - JavaScript (Vanilla)
 - Express.js
 - Nunjucks template engine
+- SQLite3 for data persistence
 - External APIs Integration (IBGE)
 - Git for version control
 - Mobile-First Design Approach
@@ -89,10 +105,13 @@ Ecoleta is a waste collection marketplace that helps people find collection poin
 │   ├── scripts/         # Client-side JavaScript
 │   └── styles/          # CSS files and modules
 ├── src/
-│   ├── server.js        # Express application setup
-│   └── views/           # Nunjucks template files
-├── package.json         # Project dependencies
-└── README.md           # Project documentation
+│   ├── database/        # Database related files
+│   │   ├── db.js       # Database configuration
+│   │   └── database.db # SQLite database file
+│   ├── server.js       # Express application setup
+│   └── views/          # Nunjucks template files
+├── package.json        # Project dependencies
+└── README.md          # Project documentation
 ```
 
 ## 🎯 Getting Started
@@ -111,7 +130,14 @@ npm install
 yarn install
 ```
 
-3. Start the development server:
+3. Set up the database:
+
+```bash
+# The database will be automatically created on first run
+# Make sure you have write permissions in the src/database directory
+```
+
+4. Start the development server:
 
 ```bash
 npm start
@@ -119,7 +145,19 @@ npm start
 yarn start
 ```
 
-4. Open `http://localhost:3000` in your browser
+5. Open `http://localhost:3000` in your browser
+
+## 🔧 Database Configuration
+
+The project uses SQLite3 for data persistence. The database file is automatically created in the `src/database` directory when the application first runs. Make sure you have appropriate write permissions in this directory.
+
+### Database Schema
+
+The database includes tables for:
+
+- Collection points (storing location and contact information)
+- Items for collection (categories of recyclable items)
+- Point-item relationships (linking points to their accepted items)
 
 ## 📋 Commit Standards
 
@@ -190,6 +228,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## 🙏 Acknowledgments
 
 - IBGE for providing the API for location data
+- SQLite team for the robust database engine
+- Nunjucks team for the powerful templating engine
 - SVG icons for waste categories
 - Inspiration from modern waste management solutions
 
@@ -202,5 +242,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-dias-zendron-528290132/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rafaumeu)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://portfoliordz.netlify.app/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://github.com/rafaumeu)
 </div>

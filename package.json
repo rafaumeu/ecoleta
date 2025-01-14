@@ -4,12 +4,14 @@
   "description": "<p align=\"center\">\r   <img src=\"assets/logo.svg\" alt=\"Ecoleta\" width=\"300\">\r </p>",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "prod": "node src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "nunjucks": "^3.2.4",
     "sqlite3": "^5.1.7"
